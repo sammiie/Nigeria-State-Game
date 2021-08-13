@@ -2,7 +2,7 @@ import pandas as pd
 import turtle
 
 screen = turtle.Screen()
-screen.title("U.S. States Game")
+screen.title("Nigeria States Game")
 image = "NGA_map.gif"
 screen.addshape(image)
 turtle.shape(image)
@@ -10,14 +10,14 @@ pen = turtle.Turtle()
 pen.penup()
 pen.hideturtle()
 
-state_data = pd.read_csv("50_states.csv")
+state_data = pd.read_csv("36_states.csv")
 score = 0
 game_on = True
 
 all_state = list(state_data.state)
 solved_state = []
-while game_on and score < 50:
-    guess = screen.textinput(title=f"{score}/50 States Correct", prompt="What's another state's name? Enter Exit to "
+while game_on and score < 36:
+    guess = screen.textinput(title=f"{score}/36 States Correct", prompt="What's another state's name? Enter Exit to "
                                                                         "leave the game").title()
 
     if guess == "Exit":
